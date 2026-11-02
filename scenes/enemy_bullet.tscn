@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://mnx3wxfvdaql"]
+
+[ext_resource type="Script" uid="uid://0qlpmdm6xrh4" path="res://scripts/enemy_bullet.gd" id="1_qx7rs"]
+[ext_resource type="Texture2D" uid="uid://wj7soc6gciwy" path="res://assets/green_bullet_enemy.png" id="2_qx7rs"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6qi02"]
+radius = 2.0
+height = 8.0
+
+[node name="enemy_bullet" type="Area2D" unique_id=170909709]
+position = Vector2(143, 76)
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("1_qx7rs")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=579806280]
+position = Vector2(0, 1)
+texture = ExtResource("2_qx7rs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2127429984]
+shape = SubResource("CapsuleShape2D_6qi02")
