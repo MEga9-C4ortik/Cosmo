@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://dufsm1gcfrxns" path="res://scripts/hp_label.gd" id="4_p57ef"]
 [ext_resource type="FontFile" uid="uid://cocb3f2lbkjaf" path="res://assets/BoldPixels.ttf" id="5_iywne"]
 [ext_resource type="Script" uid="uid://cbkepu0wtl4o0" path="res://scripts/game_over_label.gd" id="5_u5sy4"]
+[ext_resource type="Script" uid="uid://do6m7lq58t5p2" path="res://scripts/wave_label.gd" id="7_0tnpc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p57ef"]
 bg_color = Color(0, 0, 0, 0.39215687)
@@ -288,9 +289,12 @@ script = ExtResource("2_gee14")
 enemies_container = NodePath("Enemies")
 
 [node name="SpawnTimer" type="Timer" parent="GameManager/WaveManager" unique_id=2098015492]
-autostart = true
 
 [node name="Enemies" type="Node" parent="GameManager/WaveManager" unique_id=6922096]
+
+[node name="WaveDelay" type="Timer" parent="GameManager/WaveManager" unique_id=280913905]
+wait_time = 2.0
+one_shot = true
 
 [node name="HUD" type="CanvasLayer" parent="." unique_id=269476312]
 
@@ -330,6 +334,19 @@ horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("5_u5sy4")
 
+[node name="WaveLabel" type="Label" parent="HUD" unique_id=64841795]
+visible = false
+offset_left = 63.0
+offset_top = 72.0
+offset_right = 243.0
+offset_bottom = 128.0
+theme_override_fonts/font = ExtResource("5_iywne")
+theme_override_font_sizes/font_size = 64
+text = "Wave 1"
+horizontal_alignment = 1
+uppercase = true
+script = ExtResource("7_0tnpc")
+
 [node name="TileMap" type="TileMap" parent="." unique_id=1058267807]
 position = Vector2(0, -4)
 tile_set = SubResource("TileSet_bhunq")
@@ -343,6 +360,8 @@ position = Vector2(146, 457)
 [connection signal="score_changed" from="GameManager" to="HUD/ScoreLabel" method="_on_game_manager_score_changed"]
 [connection signal="timeout" from="GameManager/Timer" to="GameManager" method="_on_timer_timeout"]
 [connection signal="enemy_died" from="GameManager/WaveManager" to="GameManager" method="_on_wave_manager_enemy_died"]
+[connection signal="wave_started" from="GameManager/WaveManager" to="HUD/WaveLabel" method="_on_wave_manager_wave_started"]
 [connection signal="timeout" from="GameManager/WaveManager/SpawnTimer" to="GameManager/WaveManager" method="_on_spawn_timer_timeout"]
+[connection signal="timeout" from="GameManager/WaveManager/WaveDelay" to="GameManager/WaveManager" method="_on_wave_delay_timeout"]
 [connection signal="died" from="player" to="GameManager" method="_on_player_died"]
 [connection signal="hp_changed" from="player" to="HUD/hpLabel" method="_on_player_hp_changed"]
