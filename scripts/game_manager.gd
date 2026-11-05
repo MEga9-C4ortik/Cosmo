@@ -1,7 +1,7 @@
 extends Node
 
 var score: int = 0
-var is_game_over = false
+var is_game_over:bool = false
 var screen_size = 0
 
 signal score_changed(value)
