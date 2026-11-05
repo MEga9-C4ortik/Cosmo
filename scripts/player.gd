@@ -1,12 +1,12 @@
 extends CharacterBody2D
 
+const BULLET_SCENE = preload("res://scenes/player_bullet.tscn")
+const MARGIN = 15
 const SPEED = 220
 const ACCEL = 600
-const MARGIN = 15
-const BULLET_SCENE = preload("res://scenes/player_bullet.tscn")
-const FIRE_COOLDOWN: float = 0.55
 
-var hp: int = 10
+var fire_cooldown: float = 0.55
+var hp: int = 5
 var player_dmg: float = 1
 var fire_timer: float = 0
 
@@ -44,7 +44,7 @@ func handle_shooting(delta: float) -> void:
 			get_parent().add_child(bullet)
 			bullet.global_position = $Muzzle.global_position
 			bullet.dmg = player_dmg
-			fire_timer = FIRE_COOLDOWN
+			fire_timer = fire_cooldown
 
 
 func _on_hit_box_area_entered(area: Area2D) -> void:
