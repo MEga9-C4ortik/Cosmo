@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://c8id1fcsguk37" path="res://scripts/enemy.gd" id="1_md0e3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bhunq"]
+size = Vector2(24, 22)
 
 [node name="Enemy" type="Area2D" unique_id=1990872275]
 position = Vector2(136, 88)
@@ -16,7 +17,7 @@ position = Vector2(0, 2)
 texture = ExtResource("1_7p1mj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=15327362]
-position = Vector2(0, -1)
+position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_bhunq")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

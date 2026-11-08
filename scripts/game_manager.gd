@@ -2,13 +2,11 @@ extends Node
 
 var score: int = 0
 var is_game_over:bool = false
-var screen_size = 0
 
 signal score_changed(value)
 signal game_over(final_score)
 
 func _ready() -> void:
-	screen_size = get_viewport().get_visible_rect()
 	is_game_over = false
 	score_changed.emit(0)
 
