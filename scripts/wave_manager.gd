@@ -54,7 +54,7 @@ func start_wave():
 
 
 func _on_spawn_timer_timeout() -> void:
-	if to_spawn <= 0:	
+	if to_spawn > 0:	
 		match TEMPLATES[curr_template]:
 			"rain":
 				spawn_rain()
@@ -92,8 +92,8 @@ func spawn_row():
 	var position = Vector2(ENEMY_MARGIN, -20)
 	
 	while is_running and to_spawn > 0:
-		create_enemy(position)
-		if !(position.x > screen_w):
+		if position.x < screen_w:
+			create_enemy(position)
 			print("pos: " + str(position))
 			position = Vector2(position.x + ENEMY_MARGIN * 3.5, -20)
 		else: 
