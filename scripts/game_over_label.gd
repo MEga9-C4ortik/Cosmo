@@ -1,6 +1,9 @@
 extends Label
 
 
-func _on_game_manager_game_over(final_score: Variant) -> void:
+func _on_game_manager_game_over(is_new_record, score, record) -> void:
 	show()
-	text = "GAME OVER \nSCORE: " + str(final_score) + "\nPress R to restart"
+	if is_new_record and score > 0:
+		text = "GAME OVER \nNEW RECORD!: " + str(score) + "\nPress R to restart"
+	else:
+		text = "GAME OVER \nSCORE: " + str(score) + "\nPress R to restart"
