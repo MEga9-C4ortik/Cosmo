@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" uid="uid://ca3pwj2h10axt" path="res://scripts/game_manager.gd" id="1_lbhrr"]
 [ext_resource type="Script" uid="uid://buqmhb5ccxh2l" path="res://scripts/wave_manager.gd" id="2_gee14"]
-[ext_resource type="Texture2D" uid="uid://id0k3b3hpgc3" path="res://assets/cosmo.png" id="2_lnu2h"]
+[ext_resource type="Texture2D" uid="uid://id0k3b3hpgc3" path="res://assets/arts/cosmo.png" id="2_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://c6yy3km3pxxe1" path="res://scenes/player.tscn" id="2_yqjtg"]
 [ext_resource type="Script" uid="uid://cqxa3li7t4nyt" path="res://scripts/score_label.gd" id="3_p57ef"]
 [ext_resource type="Script" uid="uid://dufsm1gcfrxns" path="res://scripts/hp_label.gd" id="4_p57ef"]
-[ext_resource type="FontFile" uid="uid://cocb3f2lbkjaf" path="res://assets/BoldPixels.ttf" id="5_iywne"]
+[ext_resource type="FontFile" uid="uid://cocb3f2lbkjaf" path="res://assets/arts/BoldPixels.ttf" id="5_iywne"]
 [ext_resource type="Script" uid="uid://cbkepu0wtl4o0" path="res://scripts/game_over_label.gd" id="5_u5sy4"]
 [ext_resource type="Script" uid="uid://do6m7lq58t5p2" path="res://scripts/wave_label.gd" id="7_0tnpc"]
 

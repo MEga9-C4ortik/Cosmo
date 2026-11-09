@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1e67o4w4syy1"
-path="res://.godot/imported/cosmo_ship.png-bab49fd8b60e1b5c7959e42f5ac57f4c.ctex"
+uid="uid://bitrhe3lrstm6"
+path="res://.godot/imported/red_bullet_player.png-05a29fcd3a5dedc354e9bee059b8f0a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cosmo_ship.png"
-dest_files=["res://.godot/imported/cosmo_ship.png-bab49fd8b60e1b5c7959e42f5ac57f4c.ctex"]
+source_file="res://assets/arts/red_bullet_player.png"
+dest_files=["res://.godot/imported/red_bullet_player.png-05a29fcd3a5dedc354e9bee059b8f0a6.ctex"]
 
 [params]
 

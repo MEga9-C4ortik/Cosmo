@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://id0k3b3hpgc3"
-path="res://.godot/imported/cosmo.png-197303811260872805b7eb90eae7aca3.ctex"
+uid="uid://wj7soc6gciwy"
+path="res://.godot/imported/green_bullet_enemy.png-ddf037d0a103b94287b778233fc8b700.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cosmo.png"
-dest_files=["res://.godot/imported/cosmo.png-197303811260872805b7eb90eae7aca3.ctex"]
+source_file="res://assets/arts/green_bullet_enemy.png"
+dest_files=["res://.godot/imported/green_bullet_enemy.png-ddf037d0a103b94287b778233fc8b700.ctex"]
 
 [params]
 
