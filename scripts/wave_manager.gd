@@ -48,9 +48,9 @@ func start_wave():
 
 	$"SpawnTimer".wait_time = max(WAVE_DURATION / wave_enemy_number, MIN_INTERVAL)
 	$SpawnTimer.start()
-	print("Wave: " + str(wave_number))
-	print("Enemy num: " + str(wave_enemy_number))
-	print("Curr template: " + str(TEMPLATES[curr_template]))
+	#print("Wave: " + str(wave_number))
+	#print("Enemy num: " + str(wave_enemy_number))
+	#print("Curr template: " + str(TEMPLATES[curr_template]))
 
 
 func _on_spawn_timer_timeout() -> void:
@@ -94,7 +94,7 @@ func spawn_row():
 	while is_running and to_spawn > 0:
 		if position.x < screen_w:
 			create_enemy(position)
-			print("pos: " + str(position))
+			#print("pos: " + str(position))
 			position = Vector2(position.x + ENEMY_MARGIN * 3.5, -20)
 		else: 
 			break
@@ -119,4 +119,4 @@ func _on_enemy_gone():
 	alive -= 1
 	if is_running and to_spawn == 0 and $WaveDelay.is_stopped() and alive <= wave_enemy_number * 0.06:
 		$WaveDelay.start()
-		print("wave cleared")
+		#print("wave cleared")
