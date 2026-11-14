@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://1ir8qgyumwq4" path="res://assets/arts/enemy.png" id="1_7p1mj"]
 [ext_resource type="Script" uid="uid://c8id1fcsguk37" path="res://scripts/enemy.gd" id="1_md0e3"]
+[ext_resource type="AudioStream" uid="uid://bjhpfv0av5v68" path="res://assets/sounds/enemyDeath.wav" id="3_4ra3w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bhunq"]
 size = Vector2(24, 22)
@@ -19,5 +20,9 @@ texture = ExtResource("1_7p1mj")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=15327362]
 position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_bhunq")
+
+[node name="Death" type="AudioStreamPlayer" parent="." unique_id=1359310890]
+stream = ExtResource("3_4ra3w")
+bus = &"SFX"
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

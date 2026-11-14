@@ -1,7 +1,7 @@
 extends Node
 
 const ENEMY_PLAN = preload("res://scenes/enemy.tscn")
-const ENEMY_MARGIN = 7.5
+const ENEMY_MARGIN = 20
 const DEF_ENEMY_PER_WAVE:int = 5
 const WAVE_DURATION = 22.0
 const MIN_INTERVAL = 1.0

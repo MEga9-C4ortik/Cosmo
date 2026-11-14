@@ -43,6 +43,7 @@ func handle_shooting(delta: float) -> void:
 			var bullet = BULLET_SCENE.instantiate()
 			get_parent().add_child(bullet)
 			bullet.global_position = $Muzzle.global_position
+			$SFX.play()
 			bullet.dmg = player_dmg
 			fire_timer = fire_cooldown
 
