@@ -356,8 +356,6 @@ layer_0/tile_data = PackedInt32Array(458761, 262145, 1, 458762, 327681, 1, 45876
 [node name="player" parent="." unique_id=865925559 instance=ExtResource("2_yqjtg")]
 position = Vector2(146, 457)
 
-[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1657203049]
-
 [connection signal="game_over" from="GameManager" to="HUD/GameOverLabel" method="_on_game_manager_game_over"]
 [connection signal="score_changed" from="GameManager" to="HUD/ScoreLabel" method="_on_game_manager_score_changed"]
 [connection signal="timeout" from="GameManager/Timer" to="GameManager" method="_on_timer_timeout"]
