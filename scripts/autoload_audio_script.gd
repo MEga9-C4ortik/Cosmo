@@ -1,18 +1,18 @@
 extends Node
 
-var audio_player = AudioStreamPlayer.new()
+
 
 func _ready() -> void:
-	add_child(audio_player)
+	var audio_player = AudioStreamPlayer.new()
 	audio_player.bus = "SFX"
+	add_child(audio_player)
 	
-	#tests
-	print(play_sound(""))
+	audio_player.finished.connect(on_finished)
 
-func _process(delta: float) -> void:
-	if !(audio_player.playing):
-		audio_player.queue_free()
-
-func play_sound(sound):
+func play_sound(audio_player, sound):
 	audio_player.stream = sound
 	audio_player.play()
+
+func on_finished(audio_player):
+	audio_player.stop()
+	audio_player.queue_free()
