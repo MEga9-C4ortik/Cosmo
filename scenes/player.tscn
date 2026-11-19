@@ -38,7 +38,7 @@ stream = ExtResource("3_qhqgy")
 volume_db = -20.0
 bus = &"SFX"
 
-[node name="SFX" type="AudioStreamPlayer" parent="." unique_id=1425557726]
+[node name="Shoot" type="AudioStreamPlayer" parent="." unique_id=1425557726]
 stream = ExtResource("4_dqkch")
 bus = &"SFX"
 

@@ -43,7 +43,7 @@ func handle_shooting(delta: float) -> void:
 			var bullet = BULLET_SCENE.instantiate()
 			get_parent().add_child(bullet)
 			bullet.global_position = $Muzzle.global_position
-			$SFX.play()
+			AutoloadAudioScript.play_sfx_sound($"Shoot")
 			bullet.dmg = player_dmg
 			fire_timer = fire_cooldown
 
@@ -57,4 +57,5 @@ func _on_hit_box_area_entered(area: Area2D) -> void:
 	else:
 		hp_changed.emit(0)
 		died.emit()
+		AutoloadAudioScript.play_sfx_sound($"Death")
 		queue_free()

@@ -21,7 +21,7 @@ func _on_area_entered(area: Area2D) -> void:
 	hp -= area.dmg
 	if hp <= 0:
 		died.emit(points)
-		$Death.play()
+		AutoloadAudioScript.play_sfx_sound($"Death")
 		queue_free()
 	area.queue_free()
 	
