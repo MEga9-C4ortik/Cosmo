@@ -1,13 +1,6 @@
 extends Node
 
-func _ready() -> void:
-	#tests
-	#play_sfx_sound(load("res://assets/sounds/enemyDeath.wav"))
-	#play_sfx_sound(load("res://assets/sounds/newRecord.wav"))
-	play_sfx_sound(load("res://assets/sounds/playerDeath.wav"))
-	#play_sfx_sound(load("res://assets/sounds/playerDeath(1).wav"))
-
-func play_sfx_sound(sound):
+func play_sfx_sound(sound: AudioStream):
 	var audio_player = AudioStreamPlayer.new()
 	audio_player.bus = "SFX"
 	audio_player.stream = sound
